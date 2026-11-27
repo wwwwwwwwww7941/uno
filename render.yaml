@@ -1,0 +1,9 @@
+# Render Blueprint：可选。使用 Render 控制台手动创建 Web Service 时不需要此文件。
+services:
+  - type: web
+    name: uno-party-table
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz

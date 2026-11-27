@@ -4,6 +4,9 @@
   "private": true,
   "description": "Socket.io 服务端中转的 2-4 人真人联机 UNO 派对桌",
   "main": "server.js",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js"

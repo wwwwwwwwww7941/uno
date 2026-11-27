@@ -19,8 +19,10 @@ const os = require("os");
 const crypto = require("crypto");
 const { Server } = require("socket.io");
 
+// Render 会通过环境变量注入 $PORT，并要求服务监听 0.0.0.0
+// 本地运行时没有 PORT 环境变量，则回退到 3000
 const PORT = Number(process.env.PORT) || 3000;
-const HOST = process.env.HOST || "0.0.0.0";
+const HOST = "0.0.0.0";
 
 const PROTOCOL = 1;
 const COLORS = ["red", "yellow", "green", "blue"];
